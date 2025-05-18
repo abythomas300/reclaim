@@ -1,0 +1,7 @@
+
+<svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Chain Break Icon -->
+  <path d="M20 25H10M25 25H35M17 22L10 15M13 28L6 35M33 22L40 15M37 28L44 35" stroke="#E63946" stroke-width="2" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="50" y="32" font-family="Arial, sans-serif" font-size="24" fill="#F1F1F1">Reclaim</text>
+</svg>
