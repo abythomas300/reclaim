@@ -1,3 +1,14 @@
+  //Navigation bar collapse
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector("[data-collapse-toggle]");
+    const navMenu = document.getElementById("navbar-default");
+
+    toggleButton.addEventListener("click", function () {
+      navMenu.classList.toggle("hidden");
+    });
+  });
+
+  
 // SOS button displayed only after user engagement
 const sosBtn = document.querySelector('#sosButton');
 
@@ -17,3 +28,5 @@ window.addEventListener('scroll', ()=>{
 AOS.init({
     duration: 800
   });
+
+
