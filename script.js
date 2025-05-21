@@ -1,10 +1,10 @@
   //Navigation bar collapse
   document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.querySelector("[data-collapse-toggle]");
-    const navMenu = document.getElementById("navbar-default");
+    const toggleButton = document.querySelector('[data-collapse-toggle]');
+    const navMenu = document.querySelector('#navbar-default');
 
-    toggleButton.addEventListener("click", function () {
-      navMenu.classList.toggle("hidden");
+    toggleButton.addEventListener('click', function () {
+      navMenu.classList.toggle('hidden');
     });
   });
 
@@ -22,6 +22,20 @@ window.addEventListener('scroll', ()=>{
         }
     }
 );
+
+
+// Hamburger menu outline visible only when the menu is expanded
+const toggleButton = document.querySelector('#menuToggle');
+const navMenu = document.querySelector('#navbar-default');
+toggleButton.addEventListener('click',()=>{
+  const isHidden = navMenu.classList.contains('hidden');
+
+  if(isHidden){
+    toggleButton.classList.add( 'ring-[#e63946]', 'ring-2')
+  }else{
+    toggleButton.classList.remove('ring-[#e63946]', 'ring-2');
+  }
+})
 
 
 // AOS initialization
