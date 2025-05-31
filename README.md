@@ -49,6 +49,6 @@ If you find this project helpful or inspiring, feel free to:
 
 ## 👤 About the Creator
 
-Made with ❤️ & Passion by [Aby Thomas](https://abythomas300.github.io/AbyThomas_Portfolio/)  
+Made with ❤️ & Passion by [Aby Thomas](https://abythomas.netlify.app/)  
 [GitHub](https://github.com/abythomas300) • [LinkedIn](www.linkedin.com/in/abythomas300)
 
