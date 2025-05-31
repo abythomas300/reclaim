@@ -1,283 +1,550 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <!--AOS css -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" > 
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.ico"> 
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.ico" />
     <!--Tailwind CDN-->
-   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Reclaim</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-      body{
+      @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      body {
         font-family: "Barlow", sans-serif;
       }
     </style>
-    
-</head>
-    <body>
-<!-- Header and Navigation -->
-<nav class="bg-gray-900" id="home">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="#" class="flex items-center space-x-3">
-          <img src="./assets/images/reclaim-logo.svg" class="h-13" alt="Reclaim Logo"/>
-      </a>
-      <button id="menuToggle" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none text-gray-400 hover:bg-gray-700 " aria-controls="navbar-default" aria-expanded="false">
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="#e63946" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M1 1h15M1 7h15M1 13h15"/>
+  </head>
+  <body>
+    <!-- Header and Navigation -->
+    <nav class="bg-gray-900" id="home">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="#" class="flex items-center space-x-3">
+          <img
+            src="./assets/images/reclaim-logo.svg"
+            class="h-13"
+            alt="Reclaim Logo"
+          />
+        </a>
+        <button
+          id="menuToggle"
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none text-gray-400 hover:bg-gray-700"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="#e63946"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
           </svg>
-      </button>
-      <div class="hidden w-full md:block md:w-auto border-2 border-solid border-[#e63946] rounded-lg mt-5 pb-2 md:border-0 md:rounded-none md:mt-0" id="navbar-default">
-        <ul class="text-xl flex flex-col p-4 md:p-0 mt-2 bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-900 border-gray-700 ">
-          <li>
-            <a href="#home" class="block py-2 px-3 text-white  rounded-sm md:bg-transparent md:text-white-700 md:p-0  hover:text-[#e63946] transition" aria-current="page">Home</a> 
-          </li>
-          <li>
-            <a href="#why-it-matters" class="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white-700 md:p-0 hover:text-[#e63946] transition">Why it matters?</a>
-          </li>
-          <li>
-            <a href="#stats" class="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white-700 md:p-0 hover:text-[#e63946] transition">Stats</a>
-          </li>
-          <li>
-            <a href="#action-steps" class="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white-700 md:p-0  hover:text-[#e63946] transition">What can you do?</a>
-          </li>
-          <li>
-            <a href="#conclusion" class="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white-700 md:p-0 hover:text-[#e63946] transition">Conclusion</a>
-          </li>
-        </ul>
+        </button>
+        <div
+          class="hidden w-full md:block md:w-auto border-2 border-solid border-[#e63946] rounded-lg mt-5 pb-2 md:border-0 md:rounded-none md:mt-0"
+          id="navbar-default"
+        >
+          <ul
+            class="text-xl flex flex-col p-4 md:p-0 mt-2 bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-900 border-gray-700"
+          >
+            <li>
+              <a
+                href="#home"
+                class="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white-700 md:p-0 hover:text-[#e63946] transition"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#why-it-matters"
+                class="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white-700 md:p-0 hover:text-[#e63946] transition"
+                >Why it matters?</a
+              >
+            </li>
+            <li>
+              <a
+                href="#stats"
+                class="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white-700 md:p-0 hover:text-[#e63946] transition"
+                >Stats</a
+              >
+            </li>
+            <li>
+              <a
+                href="#action-steps"
+                class="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white-700 md:p-0 hover:text-[#e63946] transition"
+                >What can you do?</a
+              >
+            </li>
+            <li>
+              <a
+                href="#conclusion"
+                class="block py-2 px-3 text-white rounded-sm md:bg-transparent md:text-white-700 md:p-0 hover:text-[#e63946] transition"
+                >Conclusion</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>    
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="bg-gray-900" id="home">
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+    <!-- Hero Section -->
+    <section class="bg-gray-900" id="home">
+      <div
+        class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+      >
         <div class="mr-auto place-self-center lg:col-span-7">
-            <h1 class="max-w-2xl mb-4 text-6xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">Porn addiction </h1>
-            <h1 class="max-w-2xl mb-10 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">The silent destroyer of our generation.</h1>
-            <h2 class="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">Take control today.</h2>
+          <h1
+            class="max-w-2xl mb-4 text-6xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white"
+          >
+            Porn addiction
+          </h1>
+          <h1
+            class="max-w-2xl mb-10 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-white"
+          >
+            The silent destroyer of our generation.
+          </h1>
+          <h2
+            class="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-white"
+          >
+            Take control today.
+          </h2>
         </div>
         <div class="lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="./assets/images/boy-screen-hero-section-image.png" alt="Boy infront of screen" class="rounded-3xl">
-        </div>                
-    </div>
-</section>
-
-<!-- Why it matters section -->
-<section class="bg-gray-900" id="why-it-matters">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-4">
-      <div class="max-w-screen-lg text-gray-500 sm:text-lg">
-        <h1 data-aos="fade-right" class="max-w-2xl mb-0 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">Why it matters?</h1>
-        <div class="container pt-10 pb-15">
-          <ol class="space-y-2 leading-relaxed">
-            <li class="flex text-body-color text-gray-300">
-              <span
-                class="mr-2.5 flex h-[26px] w-full max-w-[26px] items-center justify-center rounded-sm bg-[#e63946] text-white hover:shadow">
-                1
-              </span>
-              Porn floods the brain with dopamine, training it to seek quick gratification. Over time, this reduces motivation, focus, and real-world satisfaction.
-            </li>
-            <li class="flex text-body-color text-gray-300">
-              <span
-                class="mr-2.5 flex h-[26px] w-full max-w-[26px] items-center justify-center rounded-sm bg-[#e63946] text-base text-white">
-                2
-              </span>
-              It impacts mental health. Research links consistent porn use with increased anxiety, depression, and social withdrawal.
-            </li>
-            <li class="flex text-body-color text-gray-300">
-              <span
-                class="mr-2.5 flex h-[26px] w-full max-w-[26px] items-center justify-center rounded-sm bg-[#e63946] text-base text-white ">
-                3
-              </span>
-              It harms relationships. It distorts expectations around intimacy and connection, often leading to dissatisfaction or emotional disconnection in real-life relationships.
-            </li>
-            <li class="flex text-body-color text-gray-300">
-              <span
-                class="mr-2.5 flex h-[26px] w-full max-w-[26px] items-center justify-center rounded-sm bg-[#e63946] text-base text-white">
-                4
-              </span>
-              It affects productivity and life goals. Hours lost. Sleep disturbed. Energy drained. It’s stealing time and focus from the next generation.
-            </li>
-            <li class="flex text-body-color text-gray-300">
-              <span
-                class="mr-2.5 flex h-[26px] w-full max-w-[26px] items-center justify-center rounded-sm bg-[#e63946] text-base text-white">
-                5
-              </span>
-              And many more . . .
-            </li>
-          </ol>
+          <img
+            src="./assets/images/boy-screen-hero-section-image.png"
+            alt="Boy infront of screen"
+            class="rounded-3xl"
+          />
         </div>
       </div>
-  </div>
-</section>
+    </section>
 
-<!-- Statistics Section -->
-<section class="bg-gray-200 py-16" id="stats">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-4">Numbers don't lie</h2>
-    <p class="text-gray-600 mb-10">Take a look at these statistics from around the world.</p>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      <div>
-        <h3 data-aos="fade-up" data-aos-anchor-plaecment="top-bottom" class="text-4xl font-bold text-red-600">200K+</h3>
-        <p  data-aos="fade-up" data-aos-anchor-plaecment="top-bottom"class="text-gray-700 mt-2">Porn sites exist globally</p>
-      </div>
-      <div>
-        <h3 data-aos="fade-up" data-aos-anchor-plaecment="top-bottom" class="text-4xl font-bold text-red-600">90%+</h3>
-        <p data-aos="fade-up" data-aos-anchor-plaecment="top-bottom" class="text-gray-700 mt-2">Teen boys exposed early</p>
-      </div>
-      <div>
-        <h3 data-aos="fade-up" data-aos-anchor-plaecment="top-bottom" class="text-4xl font-bold text-red-600">56%</h3>
-        <p data-aos="fade-up" data-aos-anchor-plaecment="top-bottom" class="text-gray-700 mt-2">Divorces linked to porn</p>
-      </div>
-      <div>
-        <h3 data-aos="fade-up" data-aos-anchor-plaecment="top-bottom" class="text-4xl font-bold text-red-600">11</h3>
-        <p data-aos="fade-up" data-aos-anchor-plaecment="top-bottom" class="text-gray-700 mt-2">Avg. age of first exposure</p>
-      </div>
-    </div>
-  </div>
-</section>
-         
-<!-- What can I do about it? section -->
-<section class="bg-gray-900 py-16" id="action-steps">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl md:text-4xl font-bold text-white mb-4 text-center leading-relaxed">
-      What Can I Do About It?
-    </h2>
-    <p class="text-center text-white text-2xl  max-w-2xl mx-auto">
-      Breaking free starts with awareness and action.
-    </p>
-    <p class="text-center text-white text-2xl mb-20 max-w-2xl mx-auto">
-      Here are small, powerful steps you can take today.
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-      <div class="flex items-start space-x-4">
-        <div class="text-[#e63946]">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7s-8.268-2.943-9.542-7z" />
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-xl font-semibold text-white ">Recognize the Signs</h4>
-          <p class="text-gray-300 ">Are you watching more than you want to? Is it affecting your focus or mood? Acknowledge the impact.</p>
-        </div>
-      </div>
-
-      <div class="flex items-start space-x-4">
-        <div class="text-[#e63946]">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c.828 0 1.5.672 1.5 1.5S12.828 14 12 14s-1.5-.672-1.5-1.5S11.172 11 12 11z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M16 8V6a4 4 0 00-8 0v2m8 0H8m8 0h.5a2.5 2.5 0 012.5 2.5V14a6 6 0 01-12 0v-3.5A2.5 2.5 0 018.5 8H9" />
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-xl font-semibold text-white">Set Boundaries</h4>
-          <p class="text-gray-300 mt-1">Use screen time trackers, content blockers, or digital detox tools to build healthy limits.</p>
+    <!-- Why it matters section -->
+    <section class="bg-gray-900" id="why-it-matters">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-4">
+        <div class="max-w-screen-lg text-gray-500 sm:text-lg">
+          <h1
+            data-aos="fade-right"
+            class="max-w-2xl mb-0 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-white"
+          >
+            Why it matters?
+          </h1>
+          <div class="container pt-10 pb-15">
+            <ol class="space-y-2 leading-relaxed">
+              <li class="flex text-body-color text-gray-300">
+                <span
+                  class="mr-2.5 flex h-[26px] w-full max-w-[26px] items-center justify-center rounded-sm bg-[#e63946] text-white hover:shadow"
+                >
+                  1
+                </span>
+                Porn floods the brain with dopamine, training it to seek quick
+                gratification. Over time, this reduces motivation, focus, and
+                real-world satisfaction.
+              </li>
+              <li class="flex text-body-color text-gray-300">
+                <span
+                  class="mr-2.5 flex h-[26px] w-full max-w-[26px] items-center justify-center rounded-sm bg-[#e63946] text-base text-white"
+                >
+                  2
+                </span>
+                It impacts mental health. Research links consistent porn use
+                with increased anxiety, depression, and social withdrawal.
+              </li>
+              <li class="flex text-body-color text-gray-300">
+                <span
+                  class="mr-2.5 flex h-[26px] w-full max-w-[26px] items-center justify-center rounded-sm bg-[#e63946] text-base text-white"
+                >
+                  3
+                </span>
+                It harms relationships. It distorts expectations around intimacy
+                and connection, often leading to dissatisfaction or emotional
+                disconnection in real-life relationships.
+              </li>
+              <li class="flex text-body-color text-gray-300">
+                <span
+                  class="mr-2.5 flex h-[26px] w-full max-w-[26px] items-center justify-center rounded-sm bg-[#e63946] text-base text-white"
+                >
+                  4
+                </span>
+                It affects productivity and life goals. Hours lost. Sleep
+                disturbed. Energy drained. It’s stealing time and focus from the
+                next generation.
+              </li>
+              <li class="flex text-body-color text-gray-300">
+                <span
+                  class="mr-2.5 flex h-[26px] w-full max-w-[26px] items-center justify-center rounded-sm bg-[#e63946] text-base text-white"
+                >
+                  5
+                </span>
+                And many more . . .
+              </li>
+            </ol>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="flex items-start space-x-4">
-        <div class="text-[#e63946]">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="32" height="32">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 12h.008v.008H7.5V12zm4.5 0h.008v.008H12V12zm4.5 0h.008v.008H16.5V12z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12c0 4.418-4.03 8-9 8a9.548 9.548 0 01-4.472-1.07L3 21l1.67-3.34A7.982 7.982 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>          
+    <!-- Statistics Section -->
+    <section class="bg-gray-200 py-16" id="stats">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-4">Numbers don't lie</h2>
+        <p class="text-gray-600 mb-10">
+          Take a look at these statistics from around the world.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div>
+            <h3
+              data-aos="fade-up"
+              data-aos-anchor-plaecment="top-bottom"
+              class="text-4xl font-bold text-red-600"
+            >
+              200K+
+            </h3>
+            <p
+              data-aos="fade-up"
+              data-aos-anchor-plaecment="top-bottom"
+              class="text-gray-700 mt-2"
+            >
+              Porn sites exist globally
+            </p>
+          </div>
+          <div>
+            <h3
+              data-aos="fade-up"
+              data-aos-anchor-plaecment="top-bottom"
+              class="text-4xl font-bold text-red-600"
+            >
+              90%+
+            </h3>
+            <p
+              data-aos="fade-up"
+              data-aos-anchor-plaecment="top-bottom"
+              class="text-gray-700 mt-2"
+            >
+              Teen boys exposed early
+            </p>
+          </div>
+          <div>
+            <h3
+              data-aos="fade-up"
+              data-aos-anchor-plaecment="top-bottom"
+              class="text-4xl font-bold text-red-600"
+            >
+              56%
+            </h3>
+            <p
+              data-aos="fade-up"
+              data-aos-anchor-plaecment="top-bottom"
+              class="text-gray-700 mt-2"
+            >
+              Divorces linked to porn
+            </p>
+          </div>
+          <div>
+            <h3
+              data-aos="fade-up"
+              data-aos-anchor-plaecment="top-bottom"
+              class="text-4xl font-bold text-red-600"
+            >
+              11
+            </h3>
+            <p
+              data-aos="fade-up"
+              data-aos-anchor-plaecment="top-bottom"
+              class="text-gray-700 mt-2"
+            >
+              Avg. age of first exposure
+            </p>
+          </div>
         </div>
-        <div>
-          <h4 class="text-xl font-semibold text-white">Talk to Someone</h4>
-          <p class="text-gray-300 mt-1">Opening up to a trusted friend, mentor, or therapist can reduce shame and start your journey to healing.</p>
+      </div>
+    </section>
+
+    <!-- What can I do about it? section -->
+    <section class="bg-gray-900 py-16" id="action-steps">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2
+          class="text-4xl md:text-4xl font-bold text-white mb-4 text-center leading-relaxed"
+        >
+          What Can I Do About It?
+        </h2>
+        <p class="text-center text-white text-2xl max-w-2xl mx-auto">
+          Breaking free starts with awareness and action.
+        </p>
+        <p class="text-center text-white text-2xl mb-20 max-w-2xl mx-auto">
+          Here are small, powerful steps you can take today.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex items-start space-x-4">
+            <div class="text-[#e63946]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7s-8.268-2.943-9.542-7z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-white">
+                Recognize the Signs
+              </h4>
+              <p class="text-gray-300">
+                Are you watching more than you want to? Is it affecting your
+                focus or mood? Acknowledge the impact.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="text-[#e63946]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 11c.828 0 1.5.672 1.5 1.5S12.828 14 12 14s-1.5-.672-1.5-1.5S11.172 11 12 11z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16 8V6a4 4 0 00-8 0v2m8 0H8m8 0h.5a2.5 2.5 0 012.5 2.5V14a6 6 0 01-12 0v-3.5A2.5 2.5 0 018.5 8H9"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-white">Set Boundaries</h4>
+              <p class="text-gray-300 mt-1">
+                Use screen time trackers, content blockers, or digital detox
+                tools to build healthy limits.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="text-[#e63946]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+                width="32"
+                height="32"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7.5 12h.008v.008H7.5V12zm4.5 0h.008v.008H12V12zm4.5 0h.008v.008H16.5V12z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 12c0 4.418-4.03 8-9 8a9.548 9.548 0 01-4.472-1.07L3 21l1.67-3.34A7.982 7.982 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-white">Talk to Someone</h4>
+              <p class="text-gray-300 mt-1">
+                Opening up to a trusted friend, mentor, or therapist can reduce
+                shame and start your journey to healing.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="text-[#e63946]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#EF4444"
+                viewBox="0 0 24 24"
+                stroke="none"
+                width="32"
+                height="32"
+              >
+                <path
+                  d="M12.001 4.529c2.349-2.41 6.136-2.412 8.486 0 2.348 2.407 2.35 6.309 0 8.718l-7.09 7.275a1 1 0 01-1.414 0l-7.09-7.275c-2.35-2.409-2.348-6.311 0-8.718 2.35-2.412 6.138-2.41 8.508 0z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-white">
+                Replace With Purpose
+              </h4>
+              <p class="text-gray-300 mt-1">
+                Channel your time into fitness, creativity, volunteering, or
+                learning — it’s about building a better future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- sub-footer -->
+    <section
+      class="flex items-center justify-center py-16 bg-[#0b0f1a] text-white px-4"
+    >
+      <div class="text-center">
+        <h2 class="text-6xl md:text-6xl font-extrabold uppercase tracking-wide">
+          Hey, you got this.
+        </h2>
+        <h4 class="text-xl font-semibold text-white mt-10">
+          Reclaim your habits, Reclaim your life.
+        </h4>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer
+      class="border-t border-gray-700 bg-[#0b0f1a] text-gray-400 px-6 py-12"
+      id="conclusion"
+    >
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-center md:items-start gap-10 border-gray-700"
+      >
+        <!-- Brand/Logo Section -->
+        <div class="flex-1">
+          <a href="#home" class="flex items-center space-x-3">
+            <img
+              src="./assets/images/reclaim-logo.svg"
+              class="h-13"
+              alt="Reclaim Logo"
+            />
+          </a>
+          <p class="text-sm leading-relaxed max-w-sm">
+            Empowering mindful digital habits.
+          </p>
+          <p class="text-sm leading-relaxed max-w-sm">
+            Reclaim your time and attention in the modern age.
+          </p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold text-white mb-4">Connect with me</h3>
+          <div class="flex space-x-4">
+            <a
+              href="https://www.instagram.com/captain_mell0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              class="text-gray-400 hover:text-white transition"
+            >
+              <svg
+                class="w-6 h-6 hover:text-[#e63946] transition cursor-pointer"
+                fill="currentColor"
+                viewBox="0 0 27 24"
+              >
+                <path
+                  d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.5.2.9.5 1.3.9s.7.8.9 1.3c.2.4.3 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.5-.5.9-.9 1.3s-.8.7-1.3.9c-.4.2-1 .3-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4a3.4 3.4 0 0 1-2.2-2.2c-.2-.4-.3-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.5.5-.9.9-1.3s.8-.7 1.3-.9c.4-.2 1-.3 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 5.9.1 4.9.3 4 .7c-.9.4-1.7.9-2.5 1.7C.7 3.2.3 4 .1 5c-.3.9-.5 1.9-.6 3.1C-.1 9.3 0 9.7 0 12s-.1 2.7.1 3.9c.1 1.2.3 2.2.6 3.1.4.9.9 1.7 1.7 2.5.8.8 1.6 1.3 2.5 1.7.9.4 1.9.6 3.1.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.2-.1 2.2-.3 3.1-.6.9-.4 1.7-.9 2.5-1.7.8-.8 1.3-1.6 1.7-2.5.4-.9.6-1.9.6-3.1.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.2-.3-2.2-.6-3.1-.4-.9-.9-1.7-1.7-2.5C20.8.7 20 .3 19 .1c-.9-.3-1.9-.5-3.1-.6C15.3 0 14.9 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://github.com/abythomas300"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              class="text-gray-400 hover:text-white transition"
+            >
+              <svg
+                class="w-6 h-6 hover:text-[#e63946] transition cursor-pointer"
+                fill="currentColor"
+                viewBox="0 0 26 24"
+              >
+                <path
+                  d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-1.7c-3.3.7-4-1.6-4-1.6a3.2 3.2 0 0 0-1.3-1.7c-1.1-.8 0-.8 0-.8a2.6 2.6 0 0 1 1.9 1.3 2.7 2.7 0 0 0 3.7 1 2.7 2.7 0 0 1 .8-1.7c-2.6-.3-5.4-1.3-5.4-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.1s1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2a4.3 4.3 0 0 1 .1 3.1 4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.8-5.4 6a3 3 0 0 1 .9 2.3v3.3c0 .3.2.6.8.5A12 12 0 0 0 12 .3z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://x.com/abythomas7"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              class="text-gray-400 hover:text-white transition"
+            >
+              <svg
+                class="w-6 h-6 hover:text-[#e63946] transition cursor-pointer"
+                fill="currentColor"
+                viewBox=" 0 26 24"
+              >
+                <path
+                  d="M23.4 4.8c-.8.4-1.6.7-2.4.8a4.3 4.3 0 0 0 1.9-2.4c-.9.6-1.9 1-3 .9a4.4 4.4 0 0 0-7.5 4A12.4 12.4 0 0 1 3 3.1a4.4 4.4 0 0 0 1.4 5.9 4.2 4.2 0 0 1-2-.6v.1a4.4 4.4 0 0 0 3.6 4.3 4.3 4.3 0 0 1-2 .1 4.4 4.4 0 0 0 4.1 3.1A8.9 8.9 0 0 1 2 18.4a12.3 12.3 0 0 0 6.6 1.9c7.9 0 12.2-6.5 12.2-12.2v-.6a8.8 8.8 0 0 0 2.2-2.2z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="flex items-start space-x-4">
-        <div class="text-[#e63946]">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#EF4444" viewBox="0 0 24 24" stroke="none" width="32" height="32">
-            <path d="M12.001 4.529c2.349-2.41 6.136-2.412 8.486 0 2.348 2.407 2.35 6.309 0 8.718l-7.09 7.275a1 1 0 01-1.414 0l-7.09-7.275c-2.35-2.409-2.348-6.311 0-8.718 2.35-2.412 6.138-2.41 8.508 0z"/>
-          </svg>
-        </div>
-        <div>
-          <h4 class="text-xl font-semibold text-white">Replace With Purpose</h4>
-          <p class="text-gray-300 mt-1">Channel your time into fitness, creativity, volunteering, or learning — it’s about building a better future.</p>
-        </div>
+      <div class="mt-10 pt-6 text-center text-sm text-gray-500">
+        &copy; 2025
+        <a
+          href="https://github.com/abythomas300"
+          class="pointer hover:text-[#e63946] transition ml-3"
+          >Aby Thomas</a
+        >
       </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<!-- sub-footer -->
-<section class="flex items-center justify-center py-16 bg-[#0b0f1a] text-white px-4">
-  <div class="text-center">
-    <h2 class="text-6xl md:text-6xl font-extrabold uppercase tracking-wide">
-      Hey, you got this.
-    </h2>
-    <h4 class="text-xl font-semibold text-white mt-10">Reclaim your habits, Reclaim your life.</h4>
-  </div>
-</section>
+    <!-- SOS button -->
+    <a
+      id="sosButton"
+      href="https://helplinefaqs.nami.org/article/44-compulsive-sexual-behavior"
+      target="_blank"
+      class="opacity-0 pointer-events-none transition-opacity duration-300 fixed bottom-3 right-6 z-50 bg-red-600 text-white px-5 py-3 rounded-full shadow-lg hover:bg-red-700 duration-300 text-sm font-semibold after:content-[''] after:absolute after:inset-0 after:rounded-full after:border-1 after:border-red-400 after:animate-ping"
+    >
+      🚨SOS Help
+    </a>
 
-<!-- footer -->
-<footer class=" border-t border-gray-700 bg-[#0b0f1a] text-gray-400 px-6 py-12" id="conclusion">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-center md:items-start gap-10 border-gray-700">
+    <!-- SCRIPTS -->
 
-    <!-- Brand/Logo Section -->
-    <div class="flex-1">
-      <a href="#home" class="flex items-center space-x-3">
-        <img src="./assets/images/reclaim-logo.svg" class="h-13" alt="Reclaim Logo"/>
-      </a>
-      <p class="text-sm leading-relaxed max-w-sm">
-        Empowering mindful digital habits.
-      </p>
-      <p class="text-sm leading-relaxed max-w-sm">
-        Reclaim your time and attention in the modern age.
-      </p>
-    </div>
-
-    <!-- Social Media -->
-    <div class="flex-1 ">
-      <h3 class="text-lg font-semibold text-white mb-4">Connect with me</h3>
-      <div class="flex space-x-4">
-        <a href="https://www.instagram.com/captain_mell0/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-400 hover:text-white transition">
-        <svg class="w-6 h-6 hover:text-[#e63946] transition cursor-pointer" fill="currentColor" viewBox="0 0 27 24">
-        <path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.5.2.9.5 1.3.9s.7.8.9 1.3c.2.4.3 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.5-.5.9-.9 1.3s-.8.7-1.3.9c-.4.2-1 .3-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4a3.4 3.4 0 0 1-2.2-2.2c-.2-.4-.3-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.5.5-.9.9-1.3s.8-.7 1.3-.9c.4-.2 1-.3 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 5.9.1 4.9.3 4 .7c-.9.4-1.7.9-2.5 1.7C.7 3.2.3 4 .1 5c-.3.9-.5 1.9-.6 3.1C-.1 9.3 0 9.7 0 12s-.1 2.7.1 3.9c.1 1.2.3 2.2.6 3.1.4.9.9 1.7 1.7 2.5.8.8 1.6 1.3 2.5 1.7.9.4 1.9.6 3.1.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.2-.1 2.2-.3 3.1-.6.9-.4 1.7-.9 2.5-1.7.8-.8 1.3-1.6 1.7-2.5.4-.9.6-1.9.6-3.1.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.2-.3-2.2-.6-3.1-.4-.9-.9-1.7-1.7-2.5C20.8.7 20 .3 19 .1c-.9-.3-1.9-.5-3.1-.6C15.3 0 14.9 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z" />
-        </svg>
-      </a>
-        
-      <a href="https://github.com/abythomas300" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-gray-400 hover:text-white transition">
-      <svg class="w-6 h-6 hover:text-[#e63946] transition cursor-pointer" fill="currentColor" viewBox="0 0 26 24">
-      <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-1.7c-3.3.7-4-1.6-4-1.6a3.2 3.2 0 0 0-1.3-1.7c-1.1-.8 0-.8 0-.8a2.6 2.6 0 0 1 1.9 1.3 2.7 2.7 0 0 0 3.7 1 2.7 2.7 0 0 1 .8-1.7c-2.6-.3-5.4-1.3-5.4-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.1s1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2a4.3 4.3 0 0 1 .1 3.1 4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.8-5.4 6a3 3 0 0 1 .9 2.3v3.3c0 .3.2.6.8.5A12 12 0 0 0 12 .3z" />
-      </svg>
-      </a>
-
-      <a href="https://x.com/abythomas7" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="text-gray-400 hover:text-white transition">
-      <svg class="w-6 h-6 hover:text-[#e63946] transition cursor-pointer" fill="currentColor" viewBox=" 0 26 24">
-      <path d="M23.4 4.8c-.8.4-1.6.7-2.4.8a4.3 4.3 0 0 0 1.9-2.4c-.9.6-1.9 1-3 .9a4.4 4.4 0 0 0-7.5 4A12.4 12.4 0 0 1 3 3.1a4.4 4.4 0 0 0 1.4 5.9 4.2 4.2 0 0 1-2-.6v.1a4.4 4.4 0 0 0 3.6 4.3 4.3 4.3 0 0 1-2 .1 4.4 4.4 0 0 0 4.1 3.1A8.9 8.9 0 0 1 2 18.4a12.3 12.3 0 0 0 6.6 1.9c7.9 0 12.2-6.5 12.2-12.2v-.6a8.8 8.8 0 0 0 2.2-2.2z" />
-      </svg>
-      </a>
-
-      </div>
-    </div>
-
-  </div>
-
-  <div class="mt-10  pt-6 text-center text-sm text-gray-500">
-    &copy; 2025 <a href="https://github.com/abythomas300" class="pointer hover:text-[#e63946] transition ml-3">Aby Thomas</a>
-  </div>
-</footer>
-
-<!-- SOS button -->
-<a id="sosButton" href="https://helplinefaqs.nami.org/article/44-compulsive-sexual-behavior" target="_blank" class="opacity-0 pointer-events-none transition-opacity duration-300 fixed bottom-3 right-6 z-50 bg-red-600 text-white px-5 py-3 rounded-full shadow-lg hover:bg-red-700  duration-300 text-sm font-semibold after:content-[''] after:absolute after:inset-0 after:rounded-full after:border-1 after:border-red-400 after:animate-ping">
-  🚨SOS Help
-</a>
-
-
-  <!-- SCRIPTS -->
- 
-   <!--AOS-->
-   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-   <script src="script.js"></script>
-</body>
+    <!--AOS-->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
